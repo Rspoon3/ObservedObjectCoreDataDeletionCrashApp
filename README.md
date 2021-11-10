@@ -1,6 +1,10 @@
 When deleting a core data object that is an @ObservedObject in a SwiftUI View, the app will crash because of the "createdAt" date property.
 
 
+**FeedbackID:** FB9750936
+
+**Stack Overflow Post:** https://stackoverflow.com/questions/69917937/observed-object-core-data-deletion-crashes-app
+
 **System Info:**
 * Xcode 13.1 (13A1030d)
 * iPad Air 4th Generation (iOS 15.0 Simulator)
