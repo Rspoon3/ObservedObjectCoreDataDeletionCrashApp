@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  ObservedObjectCoreDataDeletionCrash
+//  ObservedObjectCoreDataDeletionCrashApp
 //
-//  Created by Richard Witherspoon on 11/10/21.
+//  Created by Richard Witherspoon on 11/9/21.
 //
 
 import SwiftUI
@@ -21,9 +21,14 @@ struct ContentView: View {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                        SubItemsView(item: item)
                     } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                        VStack(alignment: .leading){
+                            Text(item.title)
+                                .font(.headline)
+                            Text(item.timestamp.formatted())
+                                .font(.subheadline)
+                        }
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -46,6 +51,16 @@ struct ContentView: View {
         withAnimation {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
+            newItem.title = UUID().uuidString
+            newItem.subItems = Set()
+            
+            for _ in 0...Int.random(in: 4..<9){
+                let subItem = SubItem(context: viewContext)
+                subItem.createdAt = Date()
+                subItem.title = UUID().uuidString
+                
+                newItem.subItems.insert(subItem)
+            }
 
             do {
                 try viewContext.save()
@@ -73,16 +88,9 @@ struct ContentView: View {
         }
     }
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
+

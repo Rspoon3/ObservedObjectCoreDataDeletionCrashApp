@@ -8,21 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		A642BBAA273C368C000D87CB /* ObservedObjectCoreDataDeletionCrashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642BBA9273C368C000D87CB /* ObservedObjectCoreDataDeletionCrashApp.swift */; };
-		A642BBAC273C368C000D87CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642BBAB273C368C000D87CB /* ContentView.swift */; };
 		A642BBAE273C368D000D87CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A642BBAD273C368D000D87CB /* Assets.xcassets */; };
 		A642BBB1273C368D000D87CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A642BBB0273C368D000D87CB /* Preview Assets.xcassets */; };
 		A642BBB3273C368D000D87CB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642BBB2273C368D000D87CB /* Persistence.swift */; };
 		A642BBB6273C368D000D87CB /* ObservedObjectCoreDataDeletionCrash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A642BBB4273C368D000D87CB /* ObservedObjectCoreDataDeletionCrash.xcdatamodeld */; };
+		A642BBC0273C36BC000D87CB /* SubItemsViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642BBBC273C36BC000D87CB /* SubItemsViewRow.swift */; };
+		A642BBC1273C36BC000D87CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642BBBD273C36BC000D87CB /* ContentView.swift */; };
+		A642BBC2273C36BC000D87CB /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642BBBE273C36BC000D87CB /* Models.swift */; };
+		A642BBC3273C36BC000D87CB /* SubItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642BBBF273C36BC000D87CB /* SubItemsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A642BBA6273C368C000D87CB /* ObservedObjectCoreDataDeletionCrash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObservedObjectCoreDataDeletionCrash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A642BBA9273C368C000D87CB /* ObservedObjectCoreDataDeletionCrashApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedObjectCoreDataDeletionCrashApp.swift; sourceTree = "<group>"; };
-		A642BBAB273C368C000D87CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A642BBAD273C368D000D87CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A642BBB0273C368D000D87CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A642BBB2273C368D000D87CB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A642BBB5273C368D000D87CB /* ObservedObjectCoreDataDeletionCrash.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ObservedObjectCoreDataDeletionCrash.xcdatamodel; sourceTree = "<group>"; };
+		A642BBBC273C36BC000D87CB /* SubItemsViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubItemsViewRow.swift; sourceTree = "<group>"; };
+		A642BBBD273C36BC000D87CB /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A642BBBE273C36BC000D87CB /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A642BBBF273C36BC000D87CB /* SubItemsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubItemsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,10 @@
 			isa = PBXGroup;
 			children = (
 				A642BBA9273C368C000D87CB /* ObservedObjectCoreDataDeletionCrashApp.swift */,
-				A642BBAB273C368C000D87CB /* ContentView.swift */,
+				A642BBBD273C36BC000D87CB /* ContentView.swift */,
+				A642BBBE273C36BC000D87CB /* Models.swift */,
+				A642BBBF273C36BC000D87CB /* SubItemsView.swift */,
+				A642BBBC273C36BC000D87CB /* SubItemsViewRow.swift */,
 				A642BBAD273C368D000D87CB /* Assets.xcassets */,
 				A642BBB2273C368D000D87CB /* Persistence.swift */,
 				A642BBB4273C368D000D87CB /* ObservedObjectCoreDataDeletionCrash.xcdatamodeld */,
@@ -143,10 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A642BBC3273C36BC000D87CB /* SubItemsView.swift in Sources */,
 				A642BBB3273C368D000D87CB /* Persistence.swift in Sources */,
+				A642BBC1273C36BC000D87CB /* ContentView.swift in Sources */,
 				A642BBB6273C368D000D87CB /* ObservedObjectCoreDataDeletionCrash.xcdatamodeld in Sources */,
-				A642BBAC273C368C000D87CB /* ContentView.swift in Sources */,
+				A642BBC2273C36BC000D87CB /* Models.swift in Sources */,
 				A642BBAA273C368C000D87CB /* ObservedObjectCoreDataDeletionCrashApp.swift in Sources */,
+				A642BBC0273C36BC000D87CB /* SubItemsViewRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
