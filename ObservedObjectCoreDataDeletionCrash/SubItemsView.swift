@@ -36,5 +36,6 @@ struct SubItemsView: View {
                     }
                 }
         }
+        .navigationTitle("SubItems")
     }
 }

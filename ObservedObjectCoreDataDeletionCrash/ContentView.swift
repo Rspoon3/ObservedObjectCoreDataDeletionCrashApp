@@ -33,6 +33,7 @@ struct ContentView: View {
                 }
                 .onDelete(perform: deleteItems)
             }
+            .navigationTitle("Items")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
@@ -43,6 +44,7 @@ struct ContentView: View {
                     }
                 }
             }
+            
             Text("Select an item")
         }
     }
